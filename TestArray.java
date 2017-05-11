@@ -8,9 +8,15 @@ public class TestArray {
 
 	@Test
 	public void testSizevacio() {
-		String[] claves = {"hola"};
-		String[] valores = {"adios"};
 		ArrayAsociativo a = new ArrayAsociativo();
 		assertEquals(new Integer(0), new Integer (a.size()));
+	}
+	
+	@Test
+	public void testSizenovacio() {
+		String[] claves = {"hola"};
+		String[] valores = {"adios"};
+		ArrayAsociativo a = new ArrayAsociativo(claves,valores);
+		assertNotEquals(new Integer(0), new Integer (a.size()));
 	}
 }
