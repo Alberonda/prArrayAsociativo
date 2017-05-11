@@ -14,8 +14,8 @@ public class TestArray {
 	
 	@Test
 	public void testSizenovacio() {
-		String[] claves = {"hola"};
-		String[] valores = {"adios"};
+		String[] claves = {"hola","aaa"};
+		String[] valores = {"adios","bbb"};
 		ArrayAsociativo a = new ArrayAsociativo(claves,valores);
 		assertNotEquals(new Integer(0), new Integer (a.size()));
 	}

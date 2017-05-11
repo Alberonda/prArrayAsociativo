@@ -34,9 +34,17 @@ public class ArrayAsociativo {
 		}
 	}
 	
-	public static int size(){
-		return 0;
+	public int size(){
+		int i=0;
+		if(primero==null){
+			return 0;
+		}else{
+			while(primero!=null){
+				i++;
+				primero=primero.sig;
+			}
+		}
+		return i;
 	}
 	
-	//Métodos de instancia
 }
