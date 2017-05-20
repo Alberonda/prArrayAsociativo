@@ -82,6 +82,11 @@ public class TestArray {
 		assertEquals(new String("adios"),new String(a.get("aaa")));
 	}
 	
+	@Test
+	public void testgetOrElseVacio() {
+		ArrayAsociativo a = new ArrayAsociativo();
+		assertEquals(new String("defecto"),new String(a.getOrElse("hola","defecto")));
+	}
 	
 	
 	

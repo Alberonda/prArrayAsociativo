@@ -88,5 +88,33 @@ public class ArrayAsociativo {
 		}
 	}
 	
-}
+	public String getOrElse(String clave, String valorPorDefecto){
+		boolean encontrado=false;
+		
+		while(primero!=null && !encontrado){
+			if(primero.clave==clave){
+				encontrado=true;
+			}else{
+				primero=primero.sig;
+			}
+		}
+		if(encontrado){
+			return primero.valor;
+		}else{
+			return valorPorDefecto;
+		}
+		
+		
+	}
+	
+	
+	
+	
+	
 
+	
+	
+	
+	
+	
+}
