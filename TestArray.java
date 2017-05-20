@@ -141,7 +141,13 @@ public class TestArray {
 		assertFalse(a.containsKey("aaa"));
 	}
 	
-	
-	
+	@Test
+	public void testBorraFallo() {
+		String[] claves = {"aaa"};
+		String[] valores = {"bbb"};
+		ArrayAsociativo a = new ArrayAsociativo(claves,valores);
+		assertFalse(a.remove("bbb"));
+		assertFalse(a.containsKey("aaa"));
+	}
 
 }
