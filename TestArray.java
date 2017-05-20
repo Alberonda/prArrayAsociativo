@@ -55,6 +55,14 @@ public class TestArray {
 	 	}
 	}
 	
+	@Test
+	public void testInsertaVacio() {
+		String[] claves = {};
+		String[] valores = {};
+		ArrayAsociativo a = new ArrayAsociativo(claves,valores);
+		a.put("hola","adios");
+		assertEquals(new String("adios"),new String(a.get("hola")));
+	}
 	
 	
 	

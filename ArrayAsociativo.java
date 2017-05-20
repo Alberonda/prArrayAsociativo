@@ -68,5 +68,25 @@ public class ArrayAsociativo {
 		}
 	}
 	
+	public void put(String clave, String valor){
+		boolean duplicado=false;
+		
+		while(primero!=null && !duplicado){
+			if(primero.clave==clave){
+				duplicado=true;
+			}else{
+				primero=primero.sig;
+			}
+		}
+		
+		if(!duplicado){				//nueva entrada se mete al final
+			Nodo nuevo=new Nodo(clave,valor,null);
+			primero=nuevo;
+			
+		}else{
+			primero.valor=valor;	//lo encontre duplicado
+		}
+	}
+	
 }
 
