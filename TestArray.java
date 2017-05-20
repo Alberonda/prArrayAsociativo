@@ -88,6 +88,13 @@ public class TestArray {
 		assertEquals(new String("defecto"),new String(a.getOrElse("hola","defecto")));
 	}
 	
+	@Test
+	public void testgetOrElseEncontrado() {
+		String[] claves = {"aaa"};
+		String[] valores = {"bbb"};
+		ArrayAsociativo a = new ArrayAsociativo(claves,valores);
+		assertEquals(new String("bbb"),new String(a.getOrElse("aaa", "defecto")));
+	}
 	
 	
 	
@@ -98,12 +105,5 @@ public class TestArray {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }
