@@ -132,7 +132,11 @@ public class ArrayAsociativo {
 		}
 		
 		if(encontrado){
-			anterior.sig=primero.sig;
+			if(primero==null){
+				anterior.sig=null;
+			}else{
+				anterior.sig=primero.sig;
+			}
 		}
 		
 		
