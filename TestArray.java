@@ -126,6 +126,11 @@ public class TestArray {
 		assertTrue(a.containsKey("aaa"));
 	}
 	
+	@Test
+	public void testBorraVacio() {
+		ArrayAsociativo a = new ArrayAsociativo();
+		assertFalse(a.remove("aaa"));
+	}
 	
 	
 	

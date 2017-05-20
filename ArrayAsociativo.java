@@ -120,15 +120,23 @@ public class ArrayAsociativo {
 		return encontrado;
 	}
 	
-	
-	
-	
-	
-
-	
-	
-	
-	
+	public boolean remove(String clave){
+		boolean encontrado=false;
+		Nodo anterior=null;
+		while(primero!=null && !encontrado){
+			anterior=primero;
+			if(primero.clave==clave){
+				encontrado=true;
+			}
+			primero=primero.sig;
+		}
+		
+		if(encontrado){
+			anterior.sig=primero.sig;
+		}
+		
+		
+		return encontrado;
+	}
 	
 }
-
