@@ -110,6 +110,13 @@ public class TestArray {
 		assertFalse(a.containsKey("hola"));
 	}
 	
+	@Test
+	public void testcontainsKeyFallo() {
+		String[] claves = {"aaa"};
+		String[] valores = {"bbb"};
+		ArrayAsociativo a = new ArrayAsociativo(claves,valores);
+		assertFalse(a.containsKey("hola"));
+	}
 	
 	
 	
