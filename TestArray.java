@@ -1,3 +1,5 @@
+package prArrayAsociativo;
+
 import static org.junit.Assert.*;
 
 import java.util.NoSuchElementException;
@@ -37,7 +39,42 @@ public class TestArray {
 		String[] claves = {"hola","aaa"};
 		String[] valores = {"adios","bbb"};
 		ArrayAsociativo a = new ArrayAsociativo(claves,valores);
-		assertEquals(new String("adios"), new String(a.get("hola")));
+		assertTrue("Iguales", new String("adios").equals(a.get("hola")));
 	}
+	
+	@Test
+	public void testBuscarNoExiste() {
+		try {
+			String[] claves = {"hola","aaa"};
+			String[] valores = {"adios","bbb"};
+			ArrayAsociativo a = new ArrayAsociativo(claves,valores);
+			a.get("falta").equals("adios");
+		}
+	 	catch(NoSuchElementException e) {
+		 	assertTrue(true);
+	 	}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
-

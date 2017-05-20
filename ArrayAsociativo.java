@@ -53,9 +53,12 @@ public class ArrayAsociativo {
 		
 		boolean encontrado=false;
 
-		while(primero != null && primero.clave!=clave){
-			primero=primero.sig;
-			encontrado=true;
+		while(primero != null && !encontrado){
+			if(primero.clave==clave){
+				encontrado=true;
+			}else{
+				primero=primero.sig;
+			}
 		}
 		if(encontrado){//encontrado
 			return primero.valor;
