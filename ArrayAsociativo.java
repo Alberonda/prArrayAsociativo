@@ -107,6 +107,19 @@ public class ArrayAsociativo {
 		
 	}
 	
+	public boolean containsKey(String clave){
+		
+		boolean encontrado=false;
+		while(primero!=null && !encontrado){
+			if(primero.clave==clave){
+				encontrado=true;
+			}else{
+				primero=primero.sig;
+			}
+		}
+		return encontrado;
+	}
+	
 	
 	
 	
@@ -118,3 +131,4 @@ public class ArrayAsociativo {
 	
 	
 }
+

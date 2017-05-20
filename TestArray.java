@@ -104,7 +104,11 @@ public class TestArray {
 		assertEquals(new String("defecto"),new String(a.getOrElse("bbb", "defecto")));
 	}
 	
-	
+	@Test
+	public void testcontainsKeyVacio() {
+		ArrayAsociativo a = new ArrayAsociativo();
+		assertFalse(a.containsKey("hola"));
+	}
 	
 	
 	
