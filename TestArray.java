@@ -96,7 +96,13 @@ public class TestArray {
 		assertEquals(new String("bbb"),new String(a.getOrElse("aaa", "defecto")));
 	}
 	
-	
+	@Test
+	public void testgetOrElseNoEncontrado() {
+		String[] claves = {"aaa"};
+		String[] valores = {"bbb"};
+		ArrayAsociativo a = new ArrayAsociativo(claves,valores);
+		assertEquals(new String("defecto"),new String(a.getOrElse("bbb", "defecto")));
+	}
 	
 	
 	
