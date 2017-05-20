@@ -1,5 +1,7 @@
 package prArrayAsociativo;
 
+import java.util.NoSuchElementException;
+
 public class ArrayAsociativo {
 	//Clases internas
 	private class Nodo{
@@ -47,4 +49,21 @@ public class ArrayAsociativo {
 		return i;
 	}
 	
+	public String get(String clave){
+		
+		boolean encontrado=false;
+
+		while(primero != null && primero.clave!=clave){
+			primero=primero.sig;
+			encontrado=true;
+		}
+		if(encontrado){//encontrado
+			return primero.valor;
+		}
+		else{
+			throw new NoSuchElementException("No se encontro la clave");
+		}
+	}
+	
 }
+
