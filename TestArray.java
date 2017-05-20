@@ -1,5 +1,3 @@
-package prArrayAsociativo;
-
 import static org.junit.Assert.*;
 
 import java.util.NoSuchElementException;
@@ -33,4 +31,13 @@ public class TestArray {
 		 	assertTrue(true);
 	 	}
 	}
+	
+	@Test
+	public void testBuscarExiste() {
+		String[] claves = {"hola","aaa"};
+		String[] valores = {"adios","bbb"};
+		ArrayAsociativo a = new ArrayAsociativo(claves,valores);
+		assertEquals(new String("adios"), new String(a.get("hola")));
+	}
 }
+
